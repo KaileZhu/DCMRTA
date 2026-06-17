@@ -1,1 +1,2 @@
-from env.task_env import TaskEnv
+"""Backward-compatibility re-export from dcmrta.environment."""
+from dcmrta.environment import TaskEnv  # noqa: F401

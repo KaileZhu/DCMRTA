@@ -126,3 +126,28 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ── DCMRTA project-specific ─────────────────────────────────────────────
+# Model checkpoints (large .pth files)
+checkpoints/
+*.pth
+
+# Training / evaluation outputs
+train/
+gifs/
+wandb/
+
+# Data outputs (generated results — keep directory structure, ignore outputs)
+data/*/results/
+data/*/metrics/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/

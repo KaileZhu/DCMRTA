@@ -1,0 +1,48 @@
+"""Hyperparameters and configuration for DCMRTA training and evaluation."""
+
+import os
+
+# ── Device / Hardware ──────────────────────────────────────────────────────────
+USE_GPU = False
+USE_GPU_GLOBAL = True
+NUM_GPU = 1
+NUM_META_AGENT = 8
+
+# ── Training ───────────────────────────────────────────────────────────────────
+LR = 1e-5
+GAMMA = 1
+DECAY_STEP = 2e3
+RESET_OPT = False
+EVALUATE = True
+CURRICULUM_LEARNING = False
+INCREASE_DIFFICULTY = 2000
+SUMMARY_WINDOW = 8
+DEMON_RATE = 0.5
+IL_DECAY = -1e-5  # -1e-6 700k decay 0.5, -1e-5 70k decay 0.5, -1e-4 7k decay 0.5
+
+# ── Environment ────────────────────────────────────────────────────────────────
+AGENTS_RANGE = (10, 20)
+TASKS_RANGE = (20, 50)
+COALITION_SIZE = 5
+MAX_TIME = 100
+TRAIT_DIM = 1
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+FOLDER_NAME = 'REINFORCE'
+model_path = os.path.join('checkpoints', FOLDER_NAME)
+train_path = os.path.join('train', FOLDER_NAME)
+gifs_path = os.path.join('gifs', FOLDER_NAME)
+
+# ── Checkpoint / Logging ──────────────────────────────────────────────────────
+LOAD_MODEL = False
+SAVE_IMG = True
+SAVE_IMG_GAP = 10000
+WANDB_LOG = False
+
+# ── Model ─────────────────────────────────────────────────────────────────────
+BATCH_SIZE = 1024
+AGENT_INPUT_DIM = 6
+TASK_INPUT_DIM = 5
+EMBEDDING_DIM = 128
+SAMPLE_SIZE = 200
+PADDING_SIZE = 50

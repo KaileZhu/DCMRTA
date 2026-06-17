@@ -1,0 +1,25 @@
+# DCMRTA dependencies
+# Install: pip install -r requirements.txt
+
+# Core ML
+torch>=1.8.1
+numpy
+scipy
+
+# Distributed training
+ray
+
+# Visualization
+matplotlib
+
+# Data handling
+pandas
+pyyaml
+natsort
+
+# Baseline solvers
+ortools
+
+# Optional: logging & experiment tracking
+# wandb
+# tensorboard
